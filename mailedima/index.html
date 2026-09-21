@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>麦乐迪马克斯-全球顶级电玩品牌体验中心</title>
+    <meta name="description" content="麦乐迪马克斯（Maxland）致力于为玩家提供最前沿的VR虚拟现实体验、高端电玩设备及沉浸式娱乐服务。探索最新的体感游戏、亲子娱乐与赛事竞技平台。">
+    <meta name="keywords" content="麦乐迪马克斯, VR体验馆, 电玩城, 体感游戏, 沉浸式娱乐, 虚拟现实">
+    <style>
+        :root {
+            --primary-color: #6c5ce7;
+            --secondary-color: #a29bfe;
+            --accent-color: #fd79a8;
+            --dark-bg: #2d3436;
+            --light-bg: #f5f6fa;
+            --text-main: #2d3436;
+            --text-light: #636e72;
+            --white: #ffffff;
+            --border-radius: 12px;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            background-color: var(--light-bg);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .cta-btn {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 10px 24px;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-btn:hover {
+            background-color: #5649c0;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(108, 92, 231, 0.3);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding-top: 140px;
+            padding-bottom: 80px;
+            background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .hero-text h1 {
+            font-size: 48px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: var(--dark-bg);
+        }
+
+        .hero-text h1 span {
+            color: var(--primary-color);
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            color: var(--text-light);
+            margin-bottom: 30px;
+            max-width: 500px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .hero-image {
+            flex: 1;
+            position: relative;
+        }
+
+        .hero-image img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            transform: perspective(1000px) rotateY(-5deg) rotateX(2deg);
+            transition: var(--transition);
+        }
+
+        .hero-image:hover img {
+            transform: perspective(1000px) rotateY(0) rotateX(0);
+        }
+
+        /* Features Section */
+        .features {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 32px;
+            margin-bottom: 15px;
+            color: var(--dark-bg);
+        }
+
+        .section-title p {
+            color: var(--text-light);
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: var(--light-bg);
+            padding: 40px 30px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            transition: var(--transition);
+            border: 1px solid transparent;
+        }
+
+        .feature-card:hover {
+            background: var(--white);
+            box-shadow: var(--shadow);
+            border-color: rgba(108, 92, 231, 0.1);
+            transform: translateY(-5px);
+        }
+
+        .icon-box {
+            width: 70px;
+            height: 70px;
+            background: rgba(108, 92, 231, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: var(--primary-color);
+            font-size: 32px;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        .feature-card p {
+            color: var(--text-light);
+            font-size: 15px;
+        }
+
+        /* Experience Zone */
+        .experience {
+            padding: 80px 0;
+        }
+
+        .zone-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .zone-info {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .zone-list {
+            margin-top: 30px;
+        }
+
+        .zone-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
+
+        .zone-number {
+            font-size: 40px;
+            font-weight: 800;
+            color: rgba(108, 92, 231, 0.1);
+            line-height: 1;
+            margin-right: 20px;
+            min-width: 50px;
+        }
+
+        .zone-content h4 {
+            font-size: 18px;
+            margin-bottom: 8px;
+            color: var(--dark-bg);
+        }
+
+        .zone-content p {
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        .zone-gallery {
+            flex: 1;
+            min-width: 300px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .zone-gallery img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: var(--transition);
+        }
+
+        .zone-gallery img:hover {
+            transform: scale(1.05);
+            border-radius: 12px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-bg);
+            color: var(--white);
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: var(--white);
+        }
+
+        .footer-brand p {
+            color: #b2bec3;
+            font-size: 14px;
+            max-width: 300px;
+        }
+
+        .footer-col h4 {
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: var(--white);
+        }
+
+        .footer-col ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-col ul li a {
+            color: #b2bec3;
+            font-size: 14px;
+            transition: var(--transition);
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #636e72;
+            font-size: 13px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+            }
+
+            nav ul {
+                margin: 15px 0;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .hero-content {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+
+            .hero-text h1 {
+                font-size: 32px;
+            }
+
+            .hero-text p {
+                margin: 0 auto 30px;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .footer-brand p {
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                </svg>
+                麦乐迪马克斯<span>Maxland</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#home">首页</a></li>
+                    <li><a href="#features">特色体验</a></li>
+                    <li><a href="#zones">场馆分区</a></li>
+                    <li><a href="#about">关于品牌</a></li>
+                    <li><a href="#contact">联系我们</a></li>
+                </ul>
+            </nav>
+            <button class="cta-btn">立即预约</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <h1>定义未来娱乐<br><span>麦乐迪马克斯</span> 体验中心</h1>
+                    <p>引入全球领先的VR虚拟现实技术与高端体感设备，为您提供前所未有的沉浸式游戏体验。无论是硬核玩家还是家庭娱乐，这里都是您的最佳选择。</p>
+                    <div class="hero-buttons">
+                        <button class="cta-btn" style="background-color: var(--text-main);">探索游戏库</button>
+                        <button class="cta-btn" style="background-color: transparent; color: var(--text-main); border: 1px solid var(--text-main);">查看会员权益</button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <!-- Using a generic placeholder that looks like a game setup -->
+                    <img src="https://picsum.photos/seed/maxlandvr/600/400" alt="麦乐迪马克斯VR体验场景">
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features">
+            <div class="container">
+                <div class="section-title">
+                    <h2>为什么选择麦乐迪马克斯</h2>
+                    <p>超越传统电玩，打造全方位的数字娱乐生态系统</p>
+                </div>
+                <div class="feature-grid">
+                    <article class="feature-card">
+                        <div class="icon-box">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10H12V2z"></path><path d="M12 2a10 10 0 0 1 10 10"></path><path d="M12 12 2.1 12.1"></path><path d="M12 12 17.5 17.5"></path><path d="M12 12 12 21.9"></path><path d="M12 12 6.5 6.5"></path></svg>
+                        </div>
+                        <h3>前沿VR技术</h3>
+                        <p>配备最新一代头显设备与高精度追踪系统，消除眩晕感，带来影院级视觉体验。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="icon-box">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg>
+                        </div>
+                        <h3>海量游戏库</h3>
+                        <p>涵盖动作射击、赛车竞速、解谜冒险等多种类型，每周更新热门大作，满足不同玩家需求。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="icon-box">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                        </div>
+                        <h3>家庭亲子模式</h3>
+                        <p>专为家庭设计的安全互动游戏，增进亲子关系，让孩子在玩乐中释放活力。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Zones Section -->
+        <section id="zones" class="experience">
+            <div class="container zone-container">
+                <div class="zone-info">
+                    <div class="section-title" style="text-align: left; margin-bottom: 30px;">
+                        <h2>沉浸式场馆分区</h2>
+                        <p>科学的空间规划，确保每位玩家都能享受最佳体验</p>
+                    </div>
+                    <div class="zone-list">
+                        <div class="zone-item">
+                            <div class="zone-number">01</div>
+                            <div class="zone-content">
+                                <h4>虚拟竞技区</h4>
+                                <p>配备专业级赛车模拟器与射击对战平台，支持多人同场竞技，还原真实赛场氛围。</p>
+                            </div>
+                        </div>
+                        <div class="zone-item">
+                            <div class="zone-number">02</div>
+                            <div class="zone-content">
+                                <h4>VR探索大厅</h4>
+                                <p>开放式的虚拟漫游空间，玩家可自由探索奇幻岛屿、太空站等宏大场景。</p>
+                            </div>
+                        </div>
+                        <div class="zone-item">
+                            <div class="zone-number">03</div>
+                            <div class="zone-content">
+                                <h4>互动体感区</h4>
+                                <p>利用动捕技术，让玩家通过肢体动作直接控制游戏角色，打破屏幕隔阂。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="zone-gallery">
+                    <img src="https://picsum.photos/seed/gaming1/400/300" alt="VR竞技区">
+                    <img src="https://picsum.photos/seed/gaming2/400/300" alt="体感游戏">
+                    <img src="https://picsum.photos/seed/gaming3/400/300" alt="家庭娱乐">
+                    <img src="https://picsum.photos/seed/gaming4/400/300" alt="沉浸式设备">
+                </div>
+            </div>
+        </section>
+
+        <!-- About/Info Section -->
+        <section id="about" style="background-color: var(--white); padding: 80px 0;">
+            <div class="container" style="max-width: 900px; text-align: center;">
+                <div class="section-title">
+                    <h2>关于麦乐迪马克斯</h2>
+                </div>
+                <p style="color: var(--text-light); margin-bottom: 20px;">
+                    麦乐迪马克斯（Maxland）成立于2020年，是一家专注于虚拟现实（VR）与增强现实（AR）娱乐技术研发与应用的创新型企业。我们致力于通过科技手段，为大众提供高品质、低门槛的沉浸式娱乐体验。
+                </p>
+                <p style="color: var(--text-light);">
+                    无论是企业团建、生日派对，还是个人放松解压，麦乐迪马克斯都能提供定制化的服务方案。我们的场馆严格遵循安全规范，所有设备定期维护，确保您在享受乐趣的同时拥有安心的保障。
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>麦乐迪马克斯</h3>
+                    <p>连接虚拟与现实的桥梁，让快乐触手可及。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#">首页</a></li>
+                        <li><a href="#">场馆预约</a></li>
+                        <li><a href="#">游戏列表</a></li>
+                        <li><a href="#">会员中心</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>服务支持</h4>
+                    <ul>
+                        <li><a href="#">常见问题</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                        <li><a href="#">服务条款</a></li>
+                        <li><a href="#">设备安全指南</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系我们</h4>
+                    <ul>
+                        <li>电话：400-123-4567</li>
+                        <li>邮箱：contact@maxland.com</li>
+                        <li>地址：上海市浦东新区科技园A栋</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 麦乐迪马克斯体验中心 版权所有</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</body>
+</html>
