@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="手榴弹原理详解 - 深入解析手榴弹的构造、爆炸原理、引信机制及历史演变。本文从化学能到机械能的转换过程出发，详细说明破片杀伤机制与安全操作规范。">
+    <meta name="keywords" content="手榴弹原理,爆炸原理,破片杀伤,引信机制,军用爆炸物">
+    <title>手榴弹原理 - 构造、引爆机制与杀伤原理深度解析</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #c0392b;
+            --bg-color: #f4f6f7;
+            --card-bg: #ffffff;
+            --text-color: #333333;
+            --text-light: #666666;
+            --border-radius: 8px;
+            --spacing-unit: 1rem;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+        }
+
+        /* Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 1.5rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            color: #ecf0f1;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Main Content Grid */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            .hero h2 {
+                font-size: 1.8rem;
+            }
+        }
+
+        /* Section Styling */
+        section {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            margin-bottom: 2rem;
+        }
+
+        section h2 {
+            border-left: 5px solid var(--accent-color);
+            padding-left: 1rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        section h3 {
+            font-size: 1.2rem;
+            margin: 1.5rem 0 1rem;
+            color: var(--primary-color);
+        }
+
+        p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        ul {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Structure Diagram */
+        .structure-diagram {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            margin: 1.5rem 0;
+        }
+
+        .diagram-part {
+            border: 2px solid var(--primary-color);
+            padding: 0.8rem;
+            border-radius: var(--border-radius);
+            width: 100%;
+            max-width: 300px;
+            text-align: center;
+            background-color: #f9f9f9;
+            transition: transform 0.2s;
+        }
+
+        .diagram-part:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-color);
+        }
+
+        .diagram-part strong {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--accent-color);
+        }
+
+        /* Safety List */
+        .safety-list {
+            list-style: none;
+            background-color: #fff5f5;
+            border: 1px solid #ffe0e0;
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+        }
+
+        .safety-list li {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .safety-list li::before {
+            content: "⚠️";
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        /* Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 0.8rem;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        /* FAQ */
+        .faq-item {
+            border-bottom: 1px solid #eee;
+            padding: 1rem 0;
+        }
+
+        .faq-item summary {
+            font-weight: bold;
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-item summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .faq-item summary::after {
+            content: "+";
+            font-size: 1.5rem;
+            color: var(--accent-color);
+        }
+
+        details[open] summary::after {
+            content: "-";
+        }
+
+        details[open] .faq-answer {
+            margin-top: 0.5rem;
+            color: var(--text-light);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: #bdc3c7;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: auto;
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container header-content">
+        <h1>手榴弹原理</h1>
+        <nav>
+            <ul>
+                <li><a href="#structure">构造</a></li>
+                <li><a href="#mechanism">引爆机制</a></li>
+                <li><a href="#effect">杀伤原理</a></li>
+                <li><a href="#safety">安全规范</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+    <section class="hero">
+        <h2>从化学能到动能的瞬间释放</h2>
+        <p>手榴弹作为一种古老而有效的单兵便携式爆炸武器，其核心原理在于利用化学炸药在极短时间内释放出巨大的化学能，转化为冲击波和破片动能，对目标区域造成破坏。本文将深入解析其内部构造、引信技术及杀伤机理。</p>
+    </section>
+
+    <div class="content-grid">
+        <!-- Left Column: Main Content -->
+        <div class="main-column">
+            <section id="structure">
+                <h2>基本构造</h2>
+                <p>现代手榴弹通常由弹体、装药、引信、保险销等部分组成。为了提高杀伤效能，弹体往往设计为预制破片结构。</p>
+                
+                <h3>1. 弹体与装药</h3>
+                <p>弹体通常由铸铁、钢、陶瓷或塑料制成。内部填充高能炸药（如梯恩梯TNT、黑索今RDX或混合炸药）。为了增加杀伤半径，弹体表面刻有沟槽或嵌入钢珠、钢片，这些预制破片在爆炸时会被高速抛出，形成致命的弹丸。</p>
+
+                <h3>2. 引信系统</h3>
+                <p>引信是控制爆炸时机的关键部件。常见的手榴弹引信主要分为<strong>延期引信</strong>和<strong>瞬发引信</strong>。</p>
+                <ul>
+                    <li><strong>延期引信（如Mk2、木柄手榴弹）：</strong> 利用机械或化学延时装置，使手榴弹在抛出后延迟几秒至十几秒落地爆炸，给予投掷者足够的时间撤离。</li>
+                    <li><strong>瞬发引信：</strong> 利用撞击压力直接触发爆炸，通常用于近距离攻击或空爆（从上方投掷，在目标头顶爆炸）。</li>
+                </ul>
+            </section>
+
+            <section id="mechanism">
+                <h2>引爆机制</h2>
+                <p>手榴弹的引爆过程是一个精确的能量转换过程。</p>
+
+                <h3>1. 撞击与击针</h3>
+                <p>当拉环被拔出，保险销被拔掉后，击针在弹簧作用下处于待发状态。投掷手榴弹时，惯性力使击针向后压缩弹簧。当手榴弹落地，撞击地面产生的反作用力使击针向前猛烈撞击底火。</p>
+
+                <h3>2. 底火与雷管</h3>
+                <p>击针刺穿底火帽，引燃底火药。底火药燃烧产生的火焰通过导火索（对于延期引信）或直接传导至雷管。雷管是一种对火焰或冲击波极其敏感的化学装药，一旦被点燃，会发生剧烈的化学爆炸。</p>
+
+                <h3>3. 爆轰传播</h3>
+                <p>雷管引爆主装药后，产生高温高压的爆轰波，以每秒数千米的速度在炸药内部迅速传播，最终导致整个弹体发生爆炸。</p>
+            </section>
+
+            <section id="effect">
+                <h2>杀伤原理</h2>
+                <p>手榴弹爆炸产生的破坏主要来自两个方面：冲击波和破片。</p>
+
+                <div class="structure-diagram">
+                    <div class="diagram-part">
+                        <strong>冲击波</strong>
+                        <p>爆炸瞬间释放的气体迅速膨胀，压缩周围空气形成高压波阵面。冲击波能摧毁掩体、震晕敌人或造成内伤。</p>
+                    </div>
+                    <div class="diagram-part">
+                        <strong>破片杀伤</strong>
+                        <p>这是手榴弹最主要的杀伤方式。预制破片以亚音速或超音速飞散，具有极高的动能，能穿透人体组织造成贯穿伤。</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Right Column: Sidebar -->
+        <aside class="sidebar">
+            <section id="safety">
+                <h2>安全操作规范</h2>
+                <p>了解原理是为了更好地理解其危险性。在任何情况下，非专业人员应远离爆炸物。</p>
+                <ul class="safety-list">
+                    <li>切勿私自拆解任何疑似爆炸物装置。</li>
+                    <li>切勿将手指伸入投掷口检查。</li>
+                    <li>发现不明金属管状物，应保持距离并立即报警。</li>
+                    <li>在军事演习或模拟训练中，必须严格遵守投掷距离和引爆程序。</li>
+                </ul>
+            </section>
+
+            <section id="faq">
+                <h2>常见问题</h2>
+                <div class="faq-item">
+                    <details>
+                        <summary>手榴弹能扔多远？</summary>
+                        <div class="faq-answer">
+                            <p>普通木柄手榴弹的有效投掷距离约为30至50米，卵形手榴弹（如M67）由于重量较轻，投掷距离可能稍远，但一般不超过60米。</p>
+                        </div>
+                    </details>
+                </div>
+                <div class="faq-item">
+                    <details>
+                        <summary>手榴弹落地后多久爆炸？</summary>
+                        <div class="faq-answer">
+                            <p>这取决于引信类型。常见的非触发式延期引信通常设定在3至5秒左右，给投掷者留出撤离时间。</p>
+                        </div>
+                    </details>
+                </div>
+                <div class="faq-item">
+                    <details>
+                        <summary>为什么手榴弹有保险销？</summary>
+                        <div class="faq-answer">
+                            <p>保险销是为了防止手榴弹在携带、投掷或意外撞击过程中发生爆炸，确保武器在需要时才生效。</p>
+                        </div>
+                    </details>
+                </div>
+            </section>
+        </aside>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <p>本页面内容仅用于科普教育目的，旨在解析手榴弹的物理与化学原理。</p>
+        <p>严禁用于任何非法用途或不当操作。爆炸物具有极高危险性。</p>
+    </div>
+</footer>
+
+</body>
+</html>
