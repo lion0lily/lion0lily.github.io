@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>韩剧网免费韩国电视剧韩剧在线观看 - 最新热门韩剧资源与高清播放平台</title>
+    <meta name="description" content="韩剧网提供海量免费韩国电视剧在线观看服务，涵盖韩剧大全、最新韩剧、经典韩剧、韩剧排行榜及韩剧资源下载。高清流畅播放，无广告干扰，支持多端同步，是您追剧的首选平台。">
+    <meta name="keywords" content="韩剧网,免费韩国电视剧,韩剧在线观看,韩剧大全,最新韩剧,韩剧资源,韩剧排行榜">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #e50914; /* Netflix Red style */
+            --primary-hover: #b20710;
+            --bg-dark: #141414;
+            --bg-card: #1f1f1f;
+            --text-main: #ffffff;
+            --text-secondary: #b3b3b3;
+            --border-color: #333;
+            --spacing-unit: 16px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Microsoft YaHei", sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Utility */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: var(--spacing-unit);
+            padding-left: var(--spacing-unit);
+            border-left: 4px solid var(--primary-color);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .section-title a {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .section-title a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Header */
+        header {
+            background-color: rgba(20, 20, 20, 0.95);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-color);
+            padding: 15px 0;
+            backdrop-filter: blur(10px);
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            letter-spacing: -1px;
+            text-transform: uppercase;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        .search-bar {
+            flex: 1;
+            max-width: 500px;
+            margin: 0 20px;
+            position: relative;
+        }
+
+        .search-bar input {
+            width: 100%;
+            padding: 10px 15px;
+            padding-right: 40px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            background-color: #000;
+            color: var(--text-main);
+            outline: none;
+        }
+
+        .search-bar input:focus {
+            border-color: var(--primary-color);
+        }
+
+        .search-btn {
+            position: absolute;
+            right: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: var(--text-secondary);
+            cursor: pointer;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--text-main);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 60vh;
+            min-height: 400px;
+            background-image: linear-gradient(to top, rgba(20,20,20,1) 0%, rgba(20,20,20,0) 100%), url('https://picsum.photos/seed/drama1/1920/1080');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content {
+            max-width: 600px;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 4px 8px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            border-radius: 2px;
+            margin-bottom: 10px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            line-height: 1.1;
+        }
+
+        .hero p {
+            color: var(--text-secondary);
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 24px;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+        }
+
+        .btn-secondary {
+            background-color: rgba(255,255,255,0.3);
+            color: white;
+            margin-left: 10px;
+        }
+
+        .btn-secondary:hover {
+            background-color: rgba(255,255,255,0.5);
+        }
+
+        /* Main Layout */
+        main {
+            padding: 40px 0;
+        }
+
+        .grid-layout {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color: var(--bg-card);
+            border-radius: 4px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+            z-index: 2;
+        }
+
+        .card-poster {
+            width: 100%;
+            aspect-ratio: 2/3;
+            object-fit: cover;
+            background-color: #000;
+        }
+
+        .card-info {
+            padding: 12px;
+        }
+
+        .card-title {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .card-meta {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .card-rating {
+            color: #46d369; /* Good rating color */
+        }
+
+        /* Category Layout */
+        .category-section {
+            margin-bottom: 60px;
+        }
+
+        .category-tabs {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            overflow-x: auto;
+            padding-bottom: 5px;
+        }
+
+        .tab {
+            padding: 8px 16px;
+            background-color: var(--bg-card);
+            border-radius: 20px;
+            font-size: 0.9rem;
+            white-space: nowrap;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 1px solid transparent;
+        }
+
+        .tab:hover {
+            background-color: #333;
+        }
+
+        .tab.active {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        /* Ranking List */
+        .ranking-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .ranking-item {
+            display: flex;
+            gap: 20px;
+            background-color: var(--bg-card);
+            padding: 15px;
+            border-radius: 4px;
+            align-items: center;
+        }
+
+        .rank-num {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--text-secondary);
+            min-width: 40px;
+            text-align: center;
+        }
+
+        .rank-num.top-1 { color: #ffd700; }
+        .rank-num.top-2 { color: #c0c0c0; }
+        .rank-num.top-3 { color: #cd7f32; }
+
+        .rank-poster {
+            width: 80px;
+            height: 110px;
+            object-fit: cover;
+            border-radius: 2px;
+        }
+
+        .rank-content {
+            flex: 1;
+        }
+
+        .rank-title {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .rank-tags {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 8px;
+        }
+
+        .tag {
+            font-size: 0.75rem;
+            padding: 2px 6px;
+            border-radius: 2px;
+            background-color: rgba(255,255,255,0.1);
+            color: var(--text-secondary);
+        }
+
+        .tag.romance { color: #ff6b81; background-color: rgba(255, 107, 129, 0.1); }
+        .tag.action { color: #48dbfb; background-color: rgba(72, 219, 251, 0.1); }
+        .tag.history { color: #1dd1a1; background-color: rgba(29, 209, 161, 0.1); }
+
+        .rank-desc {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #000;
+            padding: 50px 0 20px;
+            margin-top: 60px;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: var(--text-main);
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #222;
+            font-size: 0.8rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .search-bar {
+                width: 100%;
+                margin: 0;
+            }
+            .nav-links {
+                width: 100%;
+                justify-content: space-between;
+                font-size: 0.8rem;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .grid-layout {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .ranking-item {
+                flex-direction: column;
+                text-align: center;
+            }
+            .rank-desc {
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container header-content">
+        <a href="#" class="logo">韩剧<span>网</span></a>
+        <div class="search-bar">
+            <input type="text" placeholder="搜索韩剧名称、演员或年份...">
+            <button class="search-btn">🔍</button>
+        </div>
+        <nav class="nav-links">
+            <a href="#" class="active">首页</a>
+            <a href="#">韩剧大全</a>
+            <a href="#">韩漫</a>
+            <a href="#">最新更新</a>
+            <a href="#">排行榜</a>
+        </nav>
+    </div>
+</header>
+
+<div class="hero">
+    <div class="hero-content">
+        <span class="hero-badge">本周热播</span>
+        <h1>黑暗荣耀</h1>
+        <p>复仇的种子在黑暗中悄然生长，当正义迟到，她决定亲手终结这一切。高能剧情，全员演技在线，不容错过的年度大作。</p>
+        <div>
+            <a href="#" class="btn btn-primary">立即观看</a>
+            <a href="#" class="btn btn-secondary">+ 加入片单</a>
+        </div>
+    </div>
+</div>
+
+<main class="container">
+    
+    <!-- Latest Updates Section -->
+    <section class="category-section">
+        <div class="section-title">
+            <h2>最新更新</h2>
+            <a href="#">查看更多 &raquo;</a>
+        </div>
+        <div class="category-tabs">
+            <span class="tab active">全部</span>
+            <span class="tab">韩剧</span>
+            <span class="tab">日剧</span>
+            <span class="tab">美剧</span>
+            <span class="tab">综艺</span>
+        </div>
+        <div class="grid-layout">
+            <!-- Card 1 -->
+            <article class="card">
+                <a href="#">
+                    <img src="https://picsum.photos/seed/drama2/300/450" alt="浪漫速成班海报" class="card-poster">
+                </a>
+                <div class="card-info">
+                    <h3 class="card-title"><a href="#">浪漫速成班</a></h3>
+                    <div class="card-meta">
+                        <span>更新至 12 集</span>
+                        <span class="card-rating">★ 9.2</span>
+                    </div>
+                </div>
+            </article>
+            <!-- Card 2 -->
+            <article class="card">
+                <a href="#">
+                    <img src="https://picsum.photos/seed/drama3/300/450" alt="泪之女王海报" class="card-poster">
+                </a>
+                <div class="card-info">
+                    <h3 class="card-title"><a href="#">泪之女王</a></h3>
+                    <div class="card-meta">
+                        <span>更新至 8 集</span>
+                        <span class="card-rating">★ 8.9</span>
+                    </div>
+                </div>
+            </article>
+            <!-- Card 3 -->
+            <article class="card">
+                <a href="#">
+                    <img src="https://picsum.photos/seed/drama4/300/450" alt="财阀家的小儿子海报" class="card-poster">
+                </a>
+                <div class="card-info">
+                    <h3 class="card-title"><a href="#">财阀家的小儿子</a></h3>
+                    <div class="card-meta">
+                        <span>更新至 16 集</span>
+                        <span class="card-rating">★ 9.5</span>
+                    </div>
+                </div>
+            </article>
+            <!-- Card 4 -->
+            <article class="card">
+                <a href="#">
+                    <img src="https://picsum.photos/seed/drama5/300/450" alt="背着善宰跑海报" class="card-poster">
+                </a>
+                <div class="card-info">
+                    <h3 class="card-title"><a href="#">背着善宰跑</a></h3>
+                    <div class="card-meta">
+                        <span>更新至 10 集</span>
+                        <span class="card-rating">★ 8.8</span>
+                    </div>
+                </div>
+            </article>
+            <!-- Card 5 -->
+            <article class="card">
+                <a href="#">
+                    <img src="https://picsum.photos/seed/drama6/300/450" alt="我的出走日记海报" class="card-poster">
+                </a>
+                <div class="card-info">
+                    <h3 class="card-title"><a href="#">我的出走日记</a></h3>
+                    <div class="card-meta">
+                        <span>更新至 16 集</span>
+                        <span class="card-rating">★ 9.1</span>
+                    </div>
+                </div>
+            </article>
+            <!-- Card 6 -->
+            <article class="card">
+                <a href="#">
+                    <img src="https://picsum.photos/seed/drama7/300/450" alt="机智医生生活海报" class="card-poster">
+                </a>
+                <div class="card-info">
+                    <h3 class="card-title"><a href="#">机智医生生活</a></h3>
+                    <div class="card-meta">
+                        <span>更新至 5 季</span>
+                        <span class="card-rating">★ 9.6</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Trending Ranking Section -->
+    <section class="category-section">
+        <div class="section-title">
+            <h2>本周热度排行榜</h2>
+            <a href="#">查看完整榜单 &raquo;</a>
+        </div>
+        <div class="ranking-list">
+            <!-- Rank 1 -->
+            <div class="ranking-item">
+                <div class="rank-num top-1">1</div>
+                <img src="https://picsum.photos/seed/drama1/100/140" alt="黑暗荣耀" class="rank-poster">
+                <div class="rank-content">
+                    <h3 class="rank-title"><a href="#">黑暗荣耀</a></h3>
+                    <div class="rank-tags">
+                        <span class="tag romance">复仇</span>
+                        <span class="tag history">剧情</span>
+                        <span class="tag">高分</span>
+                    </div>
+                    <p class="rank-desc">文东恩在高中时期遭受校园暴力，经过精心策划的复仇计划，一步步将施暴者逼入绝境的故事。</p>
+                </div>
+                <div style="text-align: right; font-size: 0.8rem; color: var(--text-secondary);">
+                    <p>热度: 98.5w</p>
+                </div>
+            </div>
+            <!-- Rank 2 -->
+            <div class="ranking-item">
+                <div class="rank-num top-2">2</div>
+                <img src="https://picsum.photos/seed/drama8/100/140" alt="眼泪女王" class="rank-poster">
+                <div class="rank-content">
+                    <h3 class="rank-title"><a href="#">眼泪女王</a></h3>
+                    <div class="rank-tags">
+                        <span class="tag romance">爱情</span>
+                        <span class="tag">财阀</span>
+                    </div>
+                    <p class="rank-desc">讲述世界顶级财阀家千金与一个平凡男子之间跌宕起伏的爱情故事。</p>
+                </div>
+                <div style="text-align: right; font-size: 0.8rem; color: var(--text-secondary);">
+                    <p>热度: 95.2w</p>
+                </div>
+            </div>
+            <!-- Rank 3 -->
+            <div class="ranking-item">
+                <div class="rank-num top-3">3</div>
+                <img src="https://picsum.photos/seed/drama9/100/140" alt="悲伤时请说爱我" class="rank-poster">
+                <div class="rank-content">
+                    <h3 class="rank-title"><a href="#">悲伤时请说爱我</a></h3>
+                    <div class="rank-tags">
+                        <span class="tag romance">治愈</span>
+                        <span class="tag">奇幻</span>
+                    </div>
+                    <p class="rank-desc">一位患有失忆症的男子与一位拥有特殊能力的女子之间感人至深的爱情故事。</p>
+                </div>
+                <div style="text-align: right; font-size: 0.8rem; color: var(--text-secondary);">
+                    <p>热度: 88.1w</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Genre Categories -->
+    <section class="category-section">
+        <div class="section-title">
+            <h2>热门分类</h2>
+        </div>
+        <div class="grid-layout">
+            <div class="card" style="padding: 20px; text-align: center; background: #2a2a2a;">
+                <h3 style="margin-bottom: 10px;">🇰🇷 韩国爱情</h3>
+                <p style="font-size: 0.9rem; color: #888; margin-bottom: 15px;">甜蜜恋爱、浪漫喜剧、经典韩式浪漫</p>
+                <a href="#" style="color: var(--primary-color); font-weight: bold;">浏览 1200+ 部</a>
+            </div>
+            <div class="card" style="padding: 20px; text-align: center; background: #2a2a2a;">
+                <h3 style="margin-bottom: 10px;">🕵️ 犯罪悬疑</h3>
+                <p style="font-size: 0.9rem; color: #888; margin-bottom: 15px;">烧脑推理、惊悚刺激、刑侦破案</p>
+                <a href="#" style="color: var(--primary-color); font-weight: bold;">浏览 850+ 部</a>
+            </div>
+            <div class="card" style="padding: 20px; text-align: center; background: #2a2a2a;">
+                <h3 style="margin-bottom: 10px;">🏥 医疗职场</h3>
+                <p style="font-size: 0.9rem; color: #888; margin-bottom: 15px;">急诊室、外科医生、职场成长</p>
+                <a href="#" style="color: var(--primary-color); font-weight: bold;">浏览 600+ 部</a>
+            </div>
+            <div class="card" style="padding: 20px; text-align: center; background: #2a2a2a;">
+                <h3 style="margin-bottom: 10px;">👑 财阀家族</h3>
+                <p style="font-size: 0.9rem; color: #888; margin-bottom: 15px;">豪门恩怨、继承者、权力斗争</p>
+                <a href="#" style="color: var(--primary-color); font-weight: bold;">浏览 500+ 部</a>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>关于韩剧网</h4>
+                <p style="font-size: 0.9rem; line-height: 1.8; color: #888;">
+                    韩剧网致力于为用户提供最优质、最快速的韩国电视剧在线观看服务。我们收录了最新的韩剧资源，包括热播剧、经典老剧以及独家引进的韩剧内容。
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4>快速导航</h4>
+                <ul>
+                    <li><a href="#">韩剧大全</a></li>
+                    <li><a href="#">最新更新</a></li>
+                    <li><a href="#">高分榜单</a></li>
+                    <li><a href="#">韩剧专题</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>热门标签</h4>
+                <ul>
+                    <li><a href="#">梨泰院 Class</a></li>
+                    <li><a href="#">机智医生生活</a></li>
+                    <li><a href="#">孤单又灿烂的神</a></li>
+                    <li><a href="#">请回答1988</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>联系我们</h4>
+                <ul>
+                    <li><a href="#">用户反馈</a></li>
+                    <li><a href="#">广告合作</a></li>
+                    <li><a href="#">侵权投诉</a></li>
+                    <li><a href="#">网站地图</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 韩剧网 版权所有 | 本站资源仅供学习交流，请勿用于商业用途</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+          </html>
