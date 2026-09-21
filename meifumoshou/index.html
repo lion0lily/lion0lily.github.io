@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="美服魔兽世界攻略、国服玩家前往美服的教程、最新版本更新内容、职业选择建议及服务器列表。提供专业的游戏资讯与玩家社区交流平台。">
+    <meta name="keywords" content="美服魔兽世界,美服国服,魔兽世界美服,魔兽世界攻略,魔兽世界怀旧服,国际服">
+    <title>美服魔兽世界-国际服玩家社区与综合攻略指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #0077cc; /* 经典蓝 */
+            --secondary-color: #c8102e; /* 狂暴红 */
+            --bg-dark: #1a1a1a;
+            --bg-card: #252525;
+            --text-main: #f0f0f0;
+            --text-muted: #a0a0a0;
+            --border-color: #444;
+            --spacing-unit: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: var(--primary-color);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* 头部导航 */
+        header {
+            background-color: rgba(26, 26, 26, 0.95);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 64px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 24px;
+        }
+
+        nav a {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-muted);
+        }
+
+        nav a.active, nav a:hover {
+            color: var(--text-main);
+        }
+
+        .nav-cta {
+            background-color: var(--primary-color);
+            color: white !important;
+            padding: 6px 16px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        .nav-cta:hover {
+            background-color: #005fa3;
+            color: white !important;
+        }
+
+        /* Hero 区域 */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://picsum.photos/seed/wowhero/1600/600') no-repeat center center/cover;
+            padding: 80px 0;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: #ddd;
+            max-width: 600px;
+            margin: 0 auto 32px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 32px;
+            background-color: var(--secondary-color);
+            color: white;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #a00d24;
+            transform: translateY(-2px);
+        }
+
+        /* 通用 Section */
+        section {
+            padding: 60px 0;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 32px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 16px;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            color: var(--text-main);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -17px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+
+        .section-more {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        /* 服务器列表 */
+        .server-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .server-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+            transition: border-color 0.2s;
+        }
+
+        .server-card:hover {
+            border-color: var(--primary-color);
+        }
+
+        .server-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .server-name {
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .server-status {
+            font-size: 0.8rem;
+            padding: 2px 8px;
+            border-radius: 12px;
+            background-color: #2e8b57;
+            color: white;
+        }
+
+        .server-info {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 16px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .server-pop {
+            color: var(--primary-color);
+        }
+
+        /* 攻略内容区 */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+        }
+
+        .article-list .article-item {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 24px;
+            margin-bottom: 20px;
+        }
+
+        .article-meta {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+            display: flex;
+            gap: 16px;
+        }
+
+        .article-title {
+            font-size: 1.25rem;
+            margin-bottom: 12px;
+            color: var(--text-main);
+        }
+
+        .article-excerpt {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* 侧边栏 */
+        aside .widget {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 24px;
+        }
+
+        .widget-title {
+            font-size: 1.1rem;
+            margin-bottom: 16px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .rank-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #333;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .rank-list li:last-child {
+            border-bottom: none;
+        }
+
+        .rank-num {
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-right: 10px;
+            width: 20px;
+        }
+
+        .rank-name {
+            flex-grow: 1;
+        }
+
+        /* FAQ */
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 20px;
+        }
+
+        .faq-item {
+            background-color: var(--bg-card);
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .faq-q {
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .faq-a {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: #111;
+            padding: 60px 0 20px;
+            margin-top: 60px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col a {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .footer-col a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            color: #555;
+            font-size: 0.85rem;
+            padding-top: 20px;
+            border-top: 1px solid #222;
+        }
+
+        /* 响应式适配 */
+        @media (max-width: 768px) {
+            .nav-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 16px 0;
+            }
+
+            nav ul {
+                margin-top: 16px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .server-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container nav-inner">
+        <a href="#" class="logo">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zm0 9l2.5-1.25L12 8.5l-2.5 1.25L12 11zm0 2.5l-5-2.5-5 2.5L12 22l10-8.5-5-2.5-5 2.5z"/></svg>
+            <span>WoW美服</span>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">首页</a></li>
+                <li><a href="#servers">服务器列表</a></li>
+                <li><a href="#guides">游戏攻略</a></li>
+                <li><a href="#faq">常见问题</a></li>
+                <li><a href="#" class="nav-cta">注册账号</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>探索艾泽拉斯的彼岸</h1>
+            <p>为您提供最新、最全的美服魔兽世界资讯。从国服停运过渡到国际服的完整指南，涵盖服务器选择、账号迁移及版本更新解读。</p>
+            <a href="#guides" class="btn">开始阅读攻略</a>
+        </div>
+    </section>
+
+    <!-- 服务器列表 Section -->
+    <section id="servers" class="container">
+        <div class="section-header">
+            <h2 class="section-title">热门服务器推荐</h2>
+            <a href="#" class="section-more">查看全部 &rarr;</a>
+        </div>
+        <div class="server-grid">
+            <article class="server-card">
+                <div class="server-header">
+                    <span class="server-name">Illidan (伊利丹)</span>
+                    <span class="server-status">在线</span>
+                </div>
+                <div class="server-info">
+                    <span>种族限制: 人族/亡灵</span>
+                    <span class="server-pop">PVP (部落/联盟)</span>
+                </div>
+                <p style="font-size: 0.9rem; color: #888;">美服最老牌的高人口PVP服务器之一，拥有活跃的公会和激烈的野外PVP环境。</p>
+            </article>
+
+            <article class="server-card">
+                <div class="server-header">
+                    <span class="server-name">Turalyon (图拉扬)</span>
+                    <span class="server-status">在线</span>
+                </div>
+                <div class="server-info">
+                    <span>种族限制: 人类/矮人/暗夜</span>
+                    <span class="server-pop">PVE (部落/联盟)</span>
+                </div>
+                <p style="font-size: 0.9rem; color: #888;">PVE服务器，适合注重副本体验和剧情探索的玩家，人口增长迅速。</p>
+            </article>
+
+            <article class="server-card">
+                <div class="server-header">
+                    <span class="server-name">Area52 (52区)</span>
+                    <span class="server-status">在线</span>
+                </div>
+                <div class="server-info">
+                    <span>种族限制: 全种族</span>
+                    <span class="server-pop">RP (角色扮演)</span>
+                </div>
+                <p style="font-size: 0.9rem; color: #888">RP服务器，拥有浓厚的社区氛围，适合喜欢沉浸式体验的玩家。</p>
+            </article>
+
+            <article class="server-card">
+                <div class="server-header">
+                    <span class="server-name">Maelstrom (莫拉格)</span>
+                    <span class="server-status">在线</span>
+                </div>
+                <div class="server-info">
+                    <span>种族限制: 全种族</span>
+                    <span class="server-pop">RP-PVP</span>
+                </div>
+                <p style="font-size: 0.9rem; color: #888">RP-PVP服务器，在角色扮演的基础上保留了激烈的阵营对抗。</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- 攻略与资讯 Section -->
+    <section id="guides" class="container">
+        <div class="content-grid">
+            <!-- 文章列表 -->
+            <div class="article-list">
+                <div class="section-header">
+                    <h2 class="section-title">最新攻略与资讯</h2>
+                </div>
+                
+                <article class="article-item">
+                    <div class="article-meta">
+                        <span>2023-11-15</span>
+                        <span>版本更新</span>
+                    </div>
+                    <h3 class="article-title"><a href="#">美服10.2版本“地心之战”前瞻：新职业机制与副本解析</a></h3>
+                    <p class="article-excerpt">随着“地心之战”版本的临近，美服玩家社区讨论热烈。本文将深入解析新地下城机制以及各职业在PVE环境下的定位变化，帮助您在国服回归前做好准备。</p>
+                </article>
+
+                <article class="article-item">
+                    <div class="article-meta">
+                        <span>2023-10-28</span>
+                        <span>账号迁移</span>
+                    </div>
+                    <h3 class="article-title"><a href="#">从国服到美服：暴雪战网账号转移全流程避坑指南</a></h3>
+                    <p class="article-excerpt">针对已经拥有国服账号的玩家，详细整理了如何通过战网国际版进行账号迁移、数据恢复以及可能遇到的延迟和地区限制问题的解决方案。</p>
+                </article>
+
+                <article class="article-item">
+                    <div class="article-meta">
+                        <span>2023-10-10</span>
+                        <span>职业推荐</span>
+                    </div>
+                    <h3 class="article-title"><a href="#">新手入坑美服推荐职业：T0级DPS与坦克选择建议</a></h3>
+                    <p class="article-excerpt">美服社区针对当前版本进行了大量数据统计。本文汇总了在PVP和PVE环境中表现优异的职业列表，并提供新手职业定位分析。</p>
+                </article>
+
+                <article class="article-item">
+                    <div class="article-meta">
+                        <span>2023-09-25</span>
+                        <span>汇率与支付</span>
+                    </div>
+                    <h3 class="article-title"><a href="#">美服充值指南：PayPal与礼品卡使用注意事项</a></h3>
+                    <p class="article-excerpt">在美服进行游戏充值需要注意哪些汇率问题？本文详细介绍了目前主流的充值渠道及其手续费，避免玩家遭受不必要的损失。</p>
+                </article>
+            </div>
+
+            <!-- 侧边栏 -->
+            <aside>
+                <div class="widget">
+                    <h3 class="widget-title">热门排行榜</h3>
+                    <ul class="rank-list">
+                        <li>
+                            <span class="rank-num">1</span>
+                            <span class="rank-name">伊利丹</span>
+                            <span style="color: #555">PVP</span>
+                        </li>
+                        <li>
+                            <span class="rank-num">2</span>
+                            <span class="rank-name">图拉扬</span>
+                            <span style="color: #555">PVE</span>
+                        </li>
+                        <li>
+                            <span class="rank-num">3</span>
+                            <span class="rank-name">布鲁塔卢斯</span>
+                            <span style="color: #555">PVP</span>
+                        </li>
+                        <li>
+                            <span class="rank-num">4</span>
+                            <span class="rank-name">迪亚波罗</span>
+                            <span style="color: #555">PVE</span>
+                        </li>
+                        <li>
+                            <span class="rank-num">5</span>
+                            <span class="rank-name">纳克萨玛斯</span>
+                            <span style="color: #555">怀旧</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="widget">
+                    <h3 class="widget-title">社区热议话题</h3>
+                    <ul class="rank-list">
+                        <li><a href="#">国服回归后的竞争环境分析</a></li>
+                        <li><a href="#">魔兽世界怀旧服与正式服对比</a></li>
+                        <li><a href="#">美服外挂检测与反作弊措施</a></li>
+                        <li><a href="#">如何加入活跃的公会</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="container">
+        <div class="section-header">
+            <h2 class="section-title">常见问题解答</h2>
+        </div>
+        <div class="faq-grid">
+            <div class="faq-item">
+                <div class="faq-q">Q: 美服魔兽世界对网络延迟有要求吗？</div>
+                <div class="faq-a">A: 魔兽世界虽然是MMORPG，但对延迟相对宽容。一般建议Ping值在100ms以内以保证技能释放的准确性，在PVP环境中建议保持在50ms以下。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Q: 如何解决战网无法连接美服的问题？</div>
+                <div class="faq-a">A: 首先确保您的战网客户端已更新至最新版本。如果连接失败，请检查您的IP地址是否被屏蔽，或者尝试更换DNS服务器（如8.8.8.8）。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Q: 美服是否有中文语音包？</div>
+                <div class="faq-a">A: 魔兽世界官方提供简体中文语音包。您可以在游戏内的“选项”-“声音”中下载并安装中文语音，但美服的UI界面默认为英文。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Q: 账号被盗怎么办？</div>
+                <div class="faq-a">A: 请立即登录暴雪官网的“账号恢复”页面，冻结账号并修改绑定邮箱。同时，建议开启战网令牌或使用暴雪手机令牌增强安全性。</div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>关于我们</h4>
+                <p style="color: #888; font-size: 0.9rem;">本站专注于美服魔兽世界玩家社区，提供最新的服务器信息、游戏攻略及玩家交流服务。</p>
+            </div>
+            <div class="footer-col">
+                <h4>快速链接</h4>
+                <ul>
+                    <li><a href="#">战网官网</a></li>
+                    <li><a href="#">魔兽世界官网</a></li>
+                    <li><a href="#">玩家论坛</a></li>
+                    <li><a href="#">游戏手册</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>相关服务</h4>
+                <ul>
+                    <li><a href="#">服务器查询</a></li>
+                    <li><a href="#">职业模拟器</a></li>
+                    <li><a href="#">数据库查询</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 WoW美服玩家社区. 本站为非官方网站，内容仅供参考。</p>
+            <p style="margin-top: 8px; color: #444;">暴雪娱乐是暴雪娱乐的注册商标。本网站与暴雪娱乐无任何官方合作关系。</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+                                                </html>
