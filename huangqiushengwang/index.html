@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="黄秋生与王晶合作电影作品深度解析，涵盖《无间道风云》、《千王之王2000》等经典影片，提供演员背景介绍、影评分析与观影指南。">
+    <meta name="keywords" content="黄秋生, 王晶, 黄秋生王晶, 香港电影, 经典港片, 电影推荐">
+    <title>黄秋生王晶-经典港片合作作品深度解析与观影指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #D32F2F;
+            --secondary-color: #212121;
+            --accent-color: #FFB300;
+            --bg-color: #F5F5F5;
+            --card-bg: #FFFFFF;
+            --text-main: #333333;
+            --text-light: #666666;
+            --border-radius: 8px;
+            --spacing-unit: 1rem;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-color);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo span {
+            color: var(--secondary-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--secondary-color);
+            position: relative;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: var(--primary-color);
+            transition: width 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .search-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2rem;
+            color: var(--secondary-color);
+        }
+
+        /* Mobile Menu Toggle */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+        .menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background-color: var(--secondary-color);
+            border-radius: 2px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://picsum.photos/seed/hkmovie/1920/600') no-repeat center center/cover;
+            color: white;
+            padding: 5rem 1.5rem;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .cta-btn:hover {
+            background-color: #b71c1c;
+            transform: translateY(-2px);
+        }
+
+        /* Main Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+        }
+
+        /* Section Styles */
+        section {
+            margin-bottom: 3rem;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 0.5rem;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: var(--secondary-color);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -0.6rem;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+
+        .view-all {
+            color: var(--primary-color);
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        /* Movie Grid */
+        .movie-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .movie-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .movie-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            background-color: #ddd;
+        }
+
+        .card-content {
+            padding: 1.2rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-meta {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-bottom: 0.5rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .card-rating {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--secondary-color);
+        }
+
+        .card-desc {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .card-footer {
+            margin-top: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 1rem;
+            border-top: 1px solid #eee;
+        }
+
+        .tag {
+            background-color: #f0f0f0;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            color: var(--text-main);
+        }
+
+        /* Sidebar */
+        aside {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .profile-card {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+
+        .profile-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            object-fit: cover;
+            border: 3px solid var(--primary-color);
+        }
+
+        .profile-name {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .profile-role {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .profile-stats {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 1.5rem;
+            padding-top: 1rem;
+            border-top: 1px solid #eee;
+        }
+
+        .stat-item h4 {
+            font-size: 1.2rem;
+            color: var(--secondary-color);
+        }
+
+        .stat-item span {
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+
+        .profile-bio {
+            text-align: left;
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-top: 1rem;
+        }
+
+        .sidebar-section {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .sidebar-title {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            padding-left: 0.5rem;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .list-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .list-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .list-icon {
+            color: var(--primary-color);
+            margin-top: 3px;
+        }
+
+        .list-content h5 {
+            font-size: 1rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .list-content p {
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        /* Comparison Table */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        .comparison-table th, .comparison-table td {
+            padding: 0.8rem;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        .comparison-table th {
+            background-color: #f9f9f9;
+            font-weight: 600;
+            width: 30%;
+        }
+
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary-color);
+            color: #ccc;
+            padding: 4rem 1.5rem 1rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-col h3 {
+            color: white;
+            margin-bottom: 1.2rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 2rem;
+            border-top: 1px solid #444;
+            text-align: center;
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-container {
+                padding: 1rem;
+            }
+
+            nav {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                padding: 1rem;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+
+            nav.active {
+                display: block;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .card-image {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">
+                <span>HK</span>Cinema
+            </a>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">合作作品</a></li>
+                    <li><a href="#">影评分析</a></li>
+                    <li><a href="#">经典榜单</a></li>
+                    <li><a href="#">关于我们</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>黄秋生与王晶的经典碰撞</h1>
+                <p>探索两位香港电影巨匠的深度合作，从无间道的警匪博弈到千王之王的黑色幽默，重温港片黄金时代的辉煌瞬间。</p>
+                <a href="#works" class="cta-btn">开始观影之旅</a>
+            </div>
+        </section>
+
+        <div class="container">
+            <!-- Main Content Area -->
+            <div class="content-area">
+                <section id="works">
+                    <div class="section-header">
+                        <h2 class="section-title">代表合作作品</h2>
+                        <a href="#" class="view-all">查看全部 &rarr;</a>
+                    </div>
+                    
+                    <div class="movie-grid">
+                        <!-- Movie Card 1 -->
+                        <article class="movie-card">
+                            <img src="https://picsum.photos/seed/innocent/400/600" alt="无间道风云 电影海报" class="card-image">
+                            <div class="card-content">
+                                <div class="card-meta">
+                                    <span>2002</span>
+                                    <span class="card-rating">9.2</span>
+                                </div>
+                                <h3 class="card-title">无间道风云</h3>
+                                <p class="card-desc">王晶监制，黄秋生饰演“倪永孝”。这是两人合作中极具分量的严肃警匪片，展现了黄秋生细腻且充满爆发力的演技。</p>
+                                <div class="card-footer">
+                                    <span class="tag">警匪</span>
+                                    <span class="tag">剧情</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Movie Card 2 -->
+                        <article class="movie-card">
+                            <img src="https://picsum.photos/seed/king/400/600" alt="千王之王2000 电影海报" class="card-image">
+                            <div class="card-content">
+                                <div class="card-meta">
+                                    <span>1999</span>
+                                    <span class="card-rating">8.5</span>
+                                </div>
+                                <h3 class="card-title">千王之王2000</h3>
+                                <p class="card-desc">王晶执导，黄秋生饰演“雷老虎”。经典的喜剧搭档，两人的对手戏充满张力，是港式喜剧的代表作之一。</p>
+                                <div class="card-footer">
+                                    <span class="tag">喜剧</span>
+                                    <span class="tag">动作</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Movie Card 3 -->
+                        <article class="movie-card">
+                            <img src="https://picsum.photos/seed/hy/400/600" alt="黑社会 电影海报" class="card-image">
+                            <div class="card-content">
+                                <div class="card-meta">
+                                    <span>2005</span>
+                                    <span class="card-rating">8.8</span>
+                                </div>
+                                <h3 class="card-title">黑社会</h3>
+                                <p class="card-desc">杜琪峰执导，王晶监制。黄秋生在片中贡献了教科书般的配角表演，虽非王晶独导，但仍是其出品体系中不可或缺的角色。</p>
+                                <div class="card-footer">
+                                    <span class="tag">黑帮</span>
+                                    <span class="tag">犯罪</span>
+                                </div>
+                            </div>
+                        </article>
+
+                         <!-- Movie Card 4 -->
+                         <article class="movie-card">
+                            <img src="https://picsum.photos/seed/joker/400/600" alt="赌侠2001 电影海报" class="card-image">
+                            <div class="card-content">
+                                <div class="card-meta">
+                                    <span>2001</span>
+                                    <span class="card-rating">8.0</span>
+                                </div>
+                                <h3 class="card-title">赌侠2001</h3>
+                                <p class="card-desc">王晶导演，黄秋生饰演“大飞”。在赌片系列中，黄秋生往往饰演亦正亦邪、性格鲜明的配角，为影片增添了不少看点。</p>
+                                <div class="card-footer">
+                                    <span class="tag">赌片</span>
+                                    <span class="tag">喜剧</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <section id="analysis">
+                    <div class="section-header">
+                        <h2 class="section-title">深度解析</h2>
+                    </div>
+                    <article style="background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+                        <h3 style="margin-bottom: 1rem; font-size: 1.4rem;">王晶与黄秋生的合作美学</h3>
+                        <p style="margin-bottom: 1rem; color: #555;">
+                            王晶作为香港商业片的领军人物，擅长挖掘演员的特质并将其放大。黄秋生以其独特的“戏痴”气质和对角色边缘性的执着，成为了王晶电影中不可或缺的调味剂。
+                        </p>
+                        <p style="margin-bottom: 1rem; color: #555;">
+                            不同于传统的正反派对立，在两人的合作中，黄秋生往往饰演那些看似市井、实则深藏不露的角色。例如在《千王之王2000》中，他将“雷老虎”的嚣张与市侩演绎得淋漓尽致，与刘德华、周星驰的对手戏成为了影史经典。而在《无间道风云》中，他又展现了倪永孝的阴狠与枭雄气概，证明了自己驾驭严肃题材的能力。
+                        </p>
+                        <p style="color: #555;">
+                            这种“商业娱乐”与“严肃演技”的结合，正是黄秋生与王晶合作最迷人的地方。
+                        </p>
+                    </article>
+                </section>
+            </div>
+
+            <!-- Sidebar Area -->
+            <aside>
+                <div class="profile-card">
+                    <img src="https://picsum.photos/seed/wong/200/200" alt="黄秋生照片" class="profile-avatar">
+                    <h3 class="profile-name">黄秋生</h3>
+                    <p class="profile-role">实力派演员</p>
+                    <div class="profile-bio">
+                        香港著名演员、编剧、主持人。凭借《香港制造》、《头文字D》等作品获得多个影帝殊荣，演技风格多变，以敢言著称。
+                    </div>
+                    <div class="profile-stats">
+                        <div class="stat-item">
+                            <h4>50+</h4>
+                            <span>主演电影</span>
+                        </div>
+                        <div class="stat-item">
+                            <h4>3</h4>
+                            <span>金像影帝</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sidebar-section">
+                    <h4 class="sidebar-title">王晶导演风格</h4>
+                    <ul class="list-group">
+                        <li class="list-item">
+                            <span class="list-icon">•</span>
+                            <div class="list-content">
+                                <h5>快节奏叙事</h5>
+                                <p>擅长在有限时间内制造高潮，娱乐性强。</p>
+                            </div>
+                        </li>
+                        <li class="list-item">
+                            <span class="list-icon">•</span>
+                            <div class="list-content">
+                                <h5>明星集结</h5>
+                                <p>热衷于将不同类型的演员组合在同一部戏中。</p>
+                            </div>
+                        </li>
+                        <li class="list-item">
+                            <span class="list-icon">•</span>
+                            <div class="list-content">
+                                <h5>类型融合</h5>
+                                <p>轻松喜剧与严肃剧情的巧妙穿插。</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-section">
+                    <h4 class="sidebar-title">推荐观影顺序</h4>
+                    <table class="comparison-table">
+                        <tr>
+                            <th>排名</th>
+                            <th>作品名称</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td><a href="#">无间道风云</a></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><a href="#">千王之王2000</a></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><a href="#">黑社会</a></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td><a href="#">赌侠2001</a></td>
+                        </tr>
+                    </table>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h3>HK Cinema</h3>
+                <p style="font-size: 0.9rem; line-height: 1.6;">
+                    专注香港电影资料整理与深度影评分享。致力于为影迷提供最全面的港片数据库与观影建议。
+                </p>
+            </div>
+            <div class="footer-col">
+                <h3>快速链接</h3>
+                <ul>
+                    <li><a href="#">关于我们</a></li>
+                    <li><a href="#">免责声明</a></li>
+                    <li><a href="#">联系合作</a></li>
+                    <li><a href="#">RSS订阅</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>热门分类</h3>
+                <ul>
+                    <li><a href="#">周星驰电影</a></li>
+                    <li><a href="#">王家卫作品</a></li>
+                    <li><a href="#">杜琪峰电影</a></li>
+                    <li><a href="#">香港TVB剧集</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>关注我们</h3>
+                <ul>
+                    <li><a href="#">微博</a></li>
+                    <li><a href="#">微信公众号</a></li>
+                    <li><a href="#">豆瓣小组</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 HK Cinema Database. All rights reserved. 本站内容仅供学习交流，不用于商业用途。</p>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle Mobile Menu
+        function toggleMenu() {
+            const nav = document.getElementById('mainNav');
+            nav.classList.toggle('active');
+        }
+
+        // Close menu when clicking a link
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mainNav').classList.remove('active');
+            });
+        });
+    </script>
+</body>
+  </html>
