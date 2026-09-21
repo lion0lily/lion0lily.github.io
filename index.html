@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>英雄联盟无限火力 - 极速乱斗模式玩法攻略与英雄推荐</title>
+    <meta name="description" content="英雄联盟无限火力模式全攻略，包含英雄出装推荐、符文搭配、实战技巧及热门玩法解析，助你轻松上分。">
+    <meta name="keywords" content="英雄联盟无限火力, 英雄联盟无限火力攻略, 英雄联盟无限火力英雄, 英雄联盟无限火力出装">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary: #f0e6d2;
+            --accent: #c89b3c;
+            --highlight: #d4af37;
+            --dark-bg: #1a1a1a;
+            --card-bg: #2d2d2d;
+            --text-main: #e0e0e0;
+            --text-sub: #a0a0a0;
+            --border-radius: 8px;
+            --spacing: 24px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: var(--highlight);
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: rgba(26, 26, 26, 0.95);
+            border-bottom: 1px solid #333;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 0 var(--spacing);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 64px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--highlight);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            font-size: 0.95rem;
+            color: var(--text-sub);
+        }
+
+        .nav-links a.active {
+            color: var(--highlight);
+            font-weight: 500;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #2c1e10 0%, #1a1a1a 100%);
+            padding: 60px var(--spacing);
+            text-align: center;
+            border-bottom: 2px solid var(--highlight);
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+            background: linear-gradient(to right, #f0e6d2, #c89b3c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            color: var(--text-sub);
+            max-width: 700px;
+            margin: 0 auto 30px;
+            font-size: 1.1rem;
+        }
+
+        .hero-btn {
+            display: inline-block;
+            background-color: var(--highlight);
+            color: #000;
+            padding: 12px 32px;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .hero-btn:hover {
+            background-color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        /* Main Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: var(--spacing);
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: var(--spacing);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+        }
+
+        /* Content Sections */
+        section {
+            margin-bottom: 40px;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--highlight);
+            padding-left: 12px;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            color: var(--text-main);
+        }
+
+        /* Hero Grid */
+        .hero-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 16px;
+        }
+
+        .hero-card {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            transition: transform 0.2s;
+            cursor: pointer;
+            border: 1px solid transparent;
+        }
+
+        .hero-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--highlight);
+        }
+
+        .hero-card img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            background-color: #3a3a3a;
+        }
+
+        .hero-card-content {
+            padding: 12px;
+        }
+
+        .hero-card h3 {
+            font-size: 1rem;
+            margin-bottom: 4px;
+        }
+
+        .hero-card span {
+            font-size: 0.8rem;
+            color: var(--text-sub);
+        }
+
+        /* Guide Article */
+        .article-card {
+            background-color: var(--card-bg);
+            padding: 24px;
+            border-radius: var(--border-radius);
+            margin-bottom: 24px;
+        }
+
+        .article-card h2 {
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+            color: var(--highlight);
+        }
+
+        .article-card p {
+            margin-bottom: 12px;
+            color: var(--text-sub);
+        }
+
+        .tag {
+            display: inline-block;
+            background-color: #444;
+            color: #fff;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            margin-right: 8px;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .rank-list {
+            list-style: none;
+        }
+
+        .rank-item {
+            display: flex;
+            align-items: center;
+            background-color: var(--card-bg);
+            padding: 12px;
+            margin-bottom: 10px;
+            border-radius: var(--border-radius);
+            border-left: 3px solid transparent;
+        }
+
+        .rank-item:nth-child(1) { border-left-color: #ffd700; }
+        .rank-item:nth-child(2) { border-left-color: #c0c0c0; }
+        .rank-item:nth-child(3) { border-left-color: #cd7f32; }
+
+        .rank-rank {
+            width: 24px;
+            height: 24px;
+            background-color: #333;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 0.8rem;
+            margin-right: 12px;
+            flex-shrink: 0;
+        }
+
+        .rank-name {
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        .rank-winrate {
+            margin-left: auto;
+            font-size: 0.8rem;
+            color: #4caf50;
+        }
+
+        /* Tips Box */
+        .tips-box {
+            background-color: rgba(200, 155, 60, 0.1);
+            border: 1px solid var(--highlight);
+            padding: 16px;
+            border-radius: var(--border-radius);
+        }
+
+        .tips-box h3 {
+            color: var(--highlight);
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+
+        .tips-list li {
+            list-style: none;
+            margin-bottom: 8px;
+            padding-left: 16px;
+            position: relative;
+            font-size: 0.9rem;
+            color: var(--text-sub);
+        }
+
+        .tips-list li::before {
+            content: "•";
+            color: var(--highlight);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #111;
+            padding: 40px var(--spacing);
+            margin-top: 40px;
+            text-align: center;
+            border-top: 1px solid #333;
+        }
+
+        .footer-links {
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            color: var(--text-sub);
+            margin: 0 10px;
+            font-size: 0.9rem;
+        }
+
+        .copyright {
+            color: #555;
+            font-size: 0.8rem;
+        }
+
+        /* Utility */
+        .hidden-mobile {
+            display: block;
+        }
+        @media (max-width: 768px) {
+            .hidden-mobile {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <span>⚡</span> 无限火力专区
+            </div>
+            <nav class="nav-links">
+                <a href="#" class="active">首页</a>
+                <a href="#">英雄推荐</a>
+                <a href="#">出装符文</a>
+                <a href="#">视频集锦</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>英雄联盟无限火力</h1>
+            <p>体验技能无限释放的极致快感，掌握版本强势英雄与出装思路，在乱斗模式中主宰赛场。</p>
+            <a href="#hero-list" class="hero-btn">查看热门英雄</a>
+        </section>
+
+        <div class="container">
+            <!-- Main Content -->
+            <div class="content-area">
+                
+                <!-- Hero List -->
+                <section id="hero-list">
+                    <div class="section-header">
+                        <h2 class="section-title">版本强势英雄</h2>
+                        <a href="#" style="font-size: 0.9rem; color: var(--highlight);">查看完整榜单 &rarr;</a>
+                    </div>
+                    <div class="hero-grid">
+                        <article class="hero-card">
+                            <img src="https://picsum.photos/seed/lol1/300/200" alt="亚索">
+                            <div class="hero-card-content">
+                                <h3>亚索</h3>
+                                <span>技能流 / 快速清线</span>
+                            </div>
+                        </article>
+                        <article class="hero-card">
+                            <img src="https://picsum.photos/seed/lol2/300/200" alt="劫">
+                            <div class="hero-card-content">
+                                <h3>劫</h3>
+                                <span>爆发 / 单杀之王</span>
+                            </div>
+                        </article>
+                        <article class="hero-card">
+                            <img src="https://picsum.photos/seed/lol3/300/200" alt="永恩">
+                            <div class="hero-card-content">
+                                <h3>永恩</h3>
+                                <span>位移 / 续航 / 消耗</span>
+                            </div>
+                        </article>
+                        <article class="hero-card">
+                            <img src="https://picsum.photos/seed/lol4/300/200" alt="拉克丝">
+                            <div class="hero-card-content">
+                                <h3>拉克丝</h3>
+                                <span>超远距离消耗</span>
+                            </div>
+                        </article>
+                        <article class="hero-card">
+                            <img src="https://picsum.photos/seed/lol5/300/200" alt="奎桑提">
+                            <div class="hero-card-content">
+                                <h3>奎桑提</h3>
+                                <span>容错率高 / 万金油</span>
+                            </div>
+                        </article>
+                        <article class="hero-card">
+                            <img src="https://picsum.photos/seed/lol6/300/200" alt="薇古丝">
+                            <div class="hero-card-content">
+                                <h3>薇古丝</h3>
+                                <span>技能机制 / 压制力强</span>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- Strategy Guides -->
+                <section>
+                    <div class="section-header">
+                        <h2 class="section-title">实战攻略与技巧</h2>
+                    </div>
+
+                    <article class="article-card">
+                        <span class="tag">出装思路</span>
+                        <h2>无限火力模式出装核心原则</h2>
+                        <p>在无限火力模式下，冷却缩减是第一属性。核心装备通常围绕“减少技能冷却时间”和“增加技能伤害”来构建。对于刺客型英雄，破败王者之刃是必出神装，配合无限火力的高频技能释放，能打出惊人的爆发伤害。</p>
+                    </article>
+
+                    <article class="article-card">
+                        <span class="tag">符文推荐</span>
+                        <h2>征服者 vs 电刑的选择</h2>
+                        <p>大多数英雄推荐携带征服者符文，因为无限火力下平A次数多，能快速叠满征服者层，提供高额的持续作战能力。而对于依赖技能爆发且平A较少的英雄（如拉克丝、奥利安娜），电刑或黑暗收割可能是更好的选择，能在瞬间打出高额爆发。</p>
+                    </article>
+
+                    <article class="article-card">
+                        <span class="tag">玩法技巧</span>
+                        <h2>技能衔接与视野控制</h2>
+                        <p>虽然是乱斗模式，但视野依然至关重要。利用无限火力的高机动性，频繁地游走于河道和野区。在团战中，优先集火敌方脆皮C位。记住，在无限火力中，闪现技能的冷却时间比平时更短，合理利用闪现调整位置是生存的关键。</p>
+                    </article>
+                </section>
+            </div>
+
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <!-- Tiers -->
+                <div class="article-card">
+                    <h3 style="margin-bottom: 15px; color: var(--highlight);">T1 英雄榜单</h3>
+                    <ul class="rank-list">
+                        <li class="rank-item">
+                            <div class="rank-rank">1</div>
+                            <span class="rank-name">亚索</span>
+                            <span class="rank-winrate">胜率 54.2%</span>
+                        </li>
+                        <li class="rank-item">
+                            <div class="rank-rank">2</div>
+                            <span class="rank-name">劫</span>
+                            <span class="rank-winrate">胜率 53.8%</span>
+                        </li>
+                        <li class="rank-item">
+                            <div class="rank-rank">3</div>
+                            <span class="rank-name">永恩</span>
+                            <span class="rank-winrate">胜率 53.5%</span>
+                        </li>
+                        <li class="rank-item">
+                            <div class="rank-rank">4</div>
+                            <span class="rank-name">薇古丝</span>
+                            <span class="rank-winrate">胜率 53.1%</span>
+                        </li>
+                        <li class="rank-item">
+                            <div class="rank-rank">5</div>
+                            <span class="rank-name">莫甘娜</span>
+                            <span class="rank-winrate">胜率 52.9%</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Tips -->
+                <div class="tips-box">
+                    <h3>💡 玩家小贴士</h3>
+                    <ul class="tips-list">
+                        <li>开启“施法辅助移动”以提高操作上限。</li>
+                        <li>注意敌方控制技能数量，选择水银饰带或水银弯刀。</li>
+                        <li>利用召唤师技能传送快速支援各路。</li>
+                        <li>不要贪刀，技能放完即可撤退，保持安全距离。</li>
+                    </ul>
+                </div>
+
+                <!-- Ad Placeholder -->
+                <div style="background-color: #222; height: 250px; display: flex; align-items: center; justify-content: center; color: #444; border-radius: 8px; border: 1px dashed #444;">
+                    广告位
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="#">关于我们</a>
+            <a href="#">免责声明</a>
+            <a href="#">联系合作</a>
+            <a href="#">隐私政策</a>
+        </div>
+        <p class="copyright">本站内容仅供学习交流使用，英雄联盟及相关商标属于 Riot Games Inc. 版权所有。</p>
+    </footer>
+
+</body>
+</html>
